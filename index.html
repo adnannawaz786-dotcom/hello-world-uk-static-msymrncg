@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hello World test page with UK localisation">
+    <meta name="author" content="Hello World UK Static">
+    <title>Hello World - UK Test Page</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇬🇧</text></svg>">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <div class="nav-brand">
+                    <span class="flag-icon" role="img" aria-label="United Kingdom flag">🇬🇧</span>
+                    <span class="brand-text">Hello World UK</span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content" class="main" role="main">
+        <!-- Hero section -->
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title">
+                        <span class="greeting" data-text="Hello, World!">Hello, World!</span>
+                        <span class="wave" role="img" aria-label="Waving hand">👋</span>
+                    </h1>
+                    <p class="hero-subtitle">Welcome to our UK localised test page</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="123">0</span>
+                            <span class="stat-label">Test Number</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="2024">0</span>
+                            <span class="stat-label">Current Year</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" id="interactive-btn" aria-describedby="btn-description">
+                            Get Started
+                        </button>
+                        <button class="btn btn-secondary" id="theme-toggle" aria-label="Toggle dark mode">
+                            <span class="theme-icon">🌙</span>
+                            <span class="theme-text">Dark Mode</span>
+                        </button>
+                    </div>
+                    <p id="btn-description" class="sr-only">Click to see interactive demonstration</p>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-elements" aria-hidden="true">
+                        <div class="floating-element element-1">🇬🇧</div>
+                        <div class="floating-element element-2">💂‍♀️</div>
+                        <div class="floating-element element-3">☕</div>
+                        <div class="floating-element element-4">🌧️</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section class="section" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section-title">About This Page</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="card-icon" role="img" aria-label="UK flag">🇬🇧</div>
+                        <h3 class="card-title">UK Localised</h3>
+                        <p class="card-description">Built with British English spellings and cultural references</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon" role="img" aria-label="Responsive design">📱</div>
+                        <h3 class="card-title">Responsive Design</h3>
+                        <p class="card-description">Optimised for all devices from mobile to desktop</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon" role="img" aria-label="Accessibility">♿</div>
+                        <h3 class="card-title">Accessible</h3>
+                        <p class="card-description">Built with WCAG 2.1 AA compliance in mind</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive demo section -->
+        <section class="section demo-section" aria-labelledby="demo-title">
+            <div class="container">
+                <h2 id="demo-title" class="section-title">Interactive Demo</h2>
+                <div class="demo-content">
+                    <div class="demo-display">
+                        <div class="display-screen" id="demo-screen" role="region" aria-live="polite" aria-label="Demo output">
+                            <p class="display-text">Click the button below to see the magic! ✨</p>
+                        </div>
+                    </div>
+                    <div class="demo-controls">
+                        <button class="btn btn-outline" id="demo-btn" aria-describedby="demo-description">
+                            Run Demo
+                        </button>
+                        <button class="btn btn-outline" id="reset-btn" disabled aria-label="Reset demo">
+                            Reset
+                        </button>
+                    </div>
+                    <p id="demo-description" class="demo-description">
+                        This demonstration showcases the interactive JavaScript functionality
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Hello World UK</h3>
+                    <p class="footer-text">A static test page demonstrating modern web development practices with UK localisation.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="#about" class="footer-link">About</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Test Info</h4>
+                    <ul class="footer-info">
+                        <li>Test ID: UK-123</li>
+                        <li>Version: 1.0.0</li>
+                        <li>Last Updated: <time id="last-updated"></time></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © <span id="current-year"></span> Hello World UK. Built with HTML, CSS & JavaScript.
+                </p>
+                <div class="footer-meta">
+                    <span class="meta-item">Made in the UK</span>
+                    <span class="meta-separator">•</span>
+                    <span class="meta-item">Static Site</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading indicator -->
+    <div class="loading-indicator" id="loading-indicator" aria-hidden="true">
+        <div class="spinner"></div>
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <!-- Toast notification container -->
+    <div class="toast-container" id="toast-container" role="status" aria-live="polite"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    <!-- Initialize page -->
+    <script>
+        // Set current year and last updated date
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const currentYearElement = document.getElementById('current-year');
+            const lastUpdatedElement = document.getElementById('last-updated');
+            
+            if (currentYearElement) {
+                currentYearElement.textContent = currentYear;
+            }
+            
+            if (lastUpdatedElement) {
+                lastUpdatedElement.textContent = new Date().toLocaleDateString('en-GB');
+                lastUpdatedElement.setAttribute('datetime', new Date().toISOString().split('T')[0]);
+            }
+        });
+    </script>
+</body>
+</html>
